@@ -3,6 +3,9 @@ const {
   ModuleFederationPlugin,
 } = require("@module-federation/enhanced/webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ModuleFederationConsoleLogPlugin = require("./module-federation-console-log-plugin");
+
+process.env.FEDERATION_DEBUG = "true";
 
 module.exports = {
   mode: "development",
@@ -41,5 +44,6 @@ module.exports = {
         generateTypes: false,
       },
     }),
+    new ModuleFederationConsoleLogPlugin(),
   ],
 };
