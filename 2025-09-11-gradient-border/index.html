@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient Border Example</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .gradient-border {
+      background-clip: padding-box, border-box;
+      background-image: linear-gradient(white, white),
+        linear-gradient(to right, pink, cyan);
+      background-origin: border-box;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      padding: 8px 16px;
+    }
+  </style>
+  <body>
+    <div class="gradient-border">AI something ...</div>
+  </body>
+</html>
