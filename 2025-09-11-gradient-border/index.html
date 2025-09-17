@@ -14,16 +14,19 @@
     }
 
     .gradient-border {
-      background-clip: padding-box, border-box;
-      background-image: linear-gradient(white, white),
-        linear-gradient(to right, pink, cyan);
-      background-origin: border-box;
       border: 2px solid transparent;
       border-radius: 4px;
       padding: 8px 16px;
+      /* 그라데이션으로 배경이미지 지정 */
+      background-image: linear-gradient(white, white),
+        linear-gradient(to right, pink, cyan);
+      /* 각 배경 레이어에 대한 clip 지정 */
+      background-clip: padding-box, border-box;
+      /* 배경의 기준을 보더 박스로 설정 */
+      background-origin: border-box;
     }
   </style>
   <body>
-    <div class="gradient-border">AI something ...</div>
+    <div class="gradient-border">여기에 콘텐츠가 들어갑니다.</div>
   </body>
 </html>
